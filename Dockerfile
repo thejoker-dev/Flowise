@@ -22,6 +22,9 @@ ENV NODE_OPTIONS=--max-old-space-size=8192
 
 WORKDIR /usr/src
 
+RUN mkdir -p /opt/render/.flowise/logs && \
+    chmod -R 755 /opt/render/.flowise
+
 # Copy app source
 COPY . .
 
